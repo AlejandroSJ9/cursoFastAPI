@@ -19,7 +19,7 @@ movies = [
         'overview': "En un exuberante planeta llamado Pandora viven los Na'vi, seres que ...",
         'year': '2009',
         'rating': 7.8,
-        'category': 'Acción'    
+        'category': 'Aventura'    
     }
 ]
 
@@ -35,3 +35,6 @@ def get_movies():
 def get_movie(id: int):
     return list(filter(lambda x:x['id']==id,movies))
 
+@app.get('/movies/',tags=['movies'])
+def get_movies_by_category(category:str):
+    return [item for item in movies if item['category'] == category]
