@@ -1,4 +1,4 @@
 # Apuntes
-´´´sh
+```sh
 uvicorn main:app --reaload
-´´´
+```
